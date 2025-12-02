@@ -423,6 +423,193 @@ VALUES
 
 ```
 
+# 🚀 CAPA ETL (Extracción, Transformación y Carga)
+
+La Capa ETL, implementada con Microsoft Fabric, se encarga de asegurar la calidad, periodicidad y coherencia del flujo de datos del proyecto. Aquí es donde se preparan y procesan los datos antes de ser almacenados y usados por el modelo semántico y el dashboard final.
+
+## A. Orquestación del Flujo de Datos: Dataflows y Pipelines
+
+Para automatizar todo el ciclo mensual de procesamiento, se utilizan Fabric Dataflows Gen2 y Pipelines, que permiten ejecutar tareas de extracción, transformación y carga de forma ordenada y sin intervención manual.
+
+A continuación se describen las tres etapas clave:
+
+## 🔹 1. Extracción (E)
+
+Los Pipelines conectan directamente con la Capa de Datos SQL (DVG2), donde se encuentran las tablas transaccionales y de mercado.
+En esta fase se extraen:
+
+Las transacciones mensuales de ventas y desembolsos.
+
+Los datos de comportamiento del mercado (por ejemplo, tb_mercado_mensual).
+
+Atributos maestros necesarios para el cálculo del indicador.
+
+El objetivo de la extracción es traer la información más reciente y garantizar que el análisis se base en el período correcto.
+
+## 🔹 2. Transformación (T)
+
+Una vez extraídos, los datos pasan a un proceso de transformación donde:
+
+Se limpian y validan los registros.
+
+Se ajustan los formatos y tipos de datos.
+
+Se combinan las distintas fuentes (ventas, mercado, atributos maestros).
+
+Se prepara la estructura base para el cálculo del KPI de participación.
+
+En esta fase se invoca un componente adicional (Notebook Python, descrito en la sección siguiente) para ejecutar reglas de negocio avanzadas.
+
+## 🔹 3. Carga (L)
+
+Finalmente, los datos transformados se envían al Fabric Data Warehouse, donde:
+
+Se almacenan como tablas de análisis optimizadas.
+
+Se actualiza el dataset utilizado por el modelo semántico.
+
+Se habilita el consumo directo para Power BI y Excel.
+
+Esta etapa garantiza que los datos queden listos para el modelado y presentación, cumpliendo con los criterios de periodicidad mensual del proyecto.
 
 
+### 🐍 B. Automatizaciones en Python (Notebooks)
+
+Como parte del proceso ETL, se implementó un Notebook de Python en Microsoft Fabric encargado de automatizar el cálculo mensual del KPI central del proyecto:
+el porcentaje de participación del BCP en el total de créditos desembolsados en soles por el sistema financiero peruano.
+
+Esta automatización permite que, cada mes, el sistema procese los datos de forma autónoma, asegurando consistencia, periodicidad y reducción de esfuerzos manuales.
+
+⚙️ Objetivo de la Automatización
+
+El propósito del Notebook es:
+
+Extraer la información mensual de desembolsos del BCP desde la tabla DVG3_Desembolsos.
+
+Extraer el volumen total del mercado de créditos desde DVG3_MercadoMensual.
+
+Consolidar ambos conjuntos de datos.
+
+Calcular el indicador (Market Share).
+
+Cargar los resultados procesados en la tabla de resultados TargetTabla.
+
+Este indicador es el que se visualiza posteriormente en Power BI para monitorear el avance hacia la meta establecida para el Business Case.
+
+🔄 Flujo Lógico de la Automatización
+
+El proceso automatizado sigue la siguiente secuencia:
+
+1️⃣ Extracción de Datos
+
+El Notebook se conecta al Lakehouse/SQL para leer:
+
+Los desembolsos mensuales del BCP desde DVG3_Desembolsos.
+
+El total de créditos desembolsados en el sistema financiero peruano desde DVG3_MercadoMensual.
+
+Ambas tablas contienen una columna de fecha, lo que permite agrupar la información por período mensual.
+
+2️⃣ Transformación y Cálculo del KPI
+
+El Notebook:
+
+Construye la clave temporal AnioMes en formato AAAAMM.
+
+Agrupa los desembolsos del BCP por mes.
+
+Agrupa los desembolsos totales del mercado por mes.
+
+Calcula el KPI de participación:
+
+**Participación de mercado (%) = (Créditos del BCP en soles) / (Créditos totales del sistema bancario en soles)**
+
+Este cálculo queda encapsulado dentro de un proceso automatizado, eliminando la necesidad de cálculos manuales o intervención del analista.
+
+
+3️⃣ Carga del Resultado en la Tabla TargetTabla
+
+Una vez obtenido el KPI:
+
+Se genera un DataFrame final con las columnas:
+
+AnioMes
+
+Desembolsos_S (BCP)
+
+MarketShare (%)
+
+Target_S (opcional, meta del indicador)
+
+Este resultado se sobreescribe o actualiza en la tabla TargetTabla.
+
+Esta tabla es consumida directamente en Power BI para generar visualizaciones del indicador.
+
+⏱️ 4️⃣ Orquestación Automática en Fabric
+
+El Notebook es ejecutado de forma programada mediante un Pipeline de Microsoft Fabric, configurado para correr mensualmente.
+De esta manera:
+
+El cálculo del KPI,
+
+La actualización del dataset,
+
+Y la disponibilidad en Power BI,
+
+se generan de forma automática, sin dependencia del usuario.
+
+Esto cumple con el requerimiento del curso de implementar al menos una automatización ETL real dentro del flujo del proyecto.
+
+Con lo anteriormente explicado, se presenta el código usado.
+
+```python
+
+from pyspark.sql import functions as F
+
+# 1. Lectura de tablas desde el Lakehouse / SQL
+desemb = spark.read.table("dbo.DVG3_Desembolsos")
+mercado = spark.read.table("dbo.DVG3_MercadoMensual")
+
+# 2. Construir clave AnioMes (AAAAMM)
+desemb = (
+    desemb
+    .withColumn("AnioMes", F.date_format(F.col("Fecha"), "yyyyMM"))
+    .groupBy("AnioMes")
+    .agg(F.sum("MontoDesembolsado").alias("Desembolsos_S"))
+)
+
+mercado = (
+    mercado
+    .withColumn("AnioMes", F.date_format(F.col("Fecha"), "yyyyMM"))
+    .groupBy("AnioMes")
+    .agg(F.sum("MontoTotalDesembolsado").alias("Desembolsos_Mercado"))
+)
+
+# 3. Cálculo del Market Share
+kpi = (
+    desemb
+    .join(mercado, on="AnioMes", how="inner")
+    .withColumn(
+        "MarketShare",
+        F.round(F.col("Desembolsos_S") / F.col("Desembolsos_Mercado") * 100, 2)
+    )
+    .withColumn("Target_S", F.lit(None).cast("decimal(18,2)"))  # meta opcional
+)
+
+# 4. Escritura en tabla de resultado
+#    (en Fabric puedes usar saveAsTable / overwrite / merge según tu diseño)
+kpi.write.mode("overwrite").saveAsTable("dbo.TargetTabla")
+
+```
+⭐ Resultado Final
+
+Gracias a esta automatización:
+
+✅ El análisis del KPI es consistente mes a mes.
+
+✅ Se minimizan errores manuales.
+
+✅ Se refuerza la trazabilidad y gobernanza de datos.
+
+✅ Se integra sin fricción con el Data Warehouse y Power BI.
 
