@@ -151,8 +151,8 @@ Con la solución analítica implementada, se espera:
 - Mayor **capacidad de explicar resultados a la alta dirección**, con reportes claros, trazables y visualmente consistentes.
 
 ---
-#☁️ Solución de Negocio Cloud con Microsoft Fabric, Power BI y Azure
-##✨ Arquitectura de Datos Moderna para el BCP
+# ☁️ Solución de Negocio Cloud con Microsoft Fabric, Power BI y Azure
+## ✨ Arquitectura de Datos Moderna para el BCP
 
 Este proyecto implementa una solución de analítica moderna en la nube, diseñada para integrar múltiples fuentes de datos, automatizar procesos ETL y habilitar dashboards ejecutivos que permitan monitorear y accionar sobre el indicador de participación de créditos del BCP.
 
