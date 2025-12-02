@@ -484,15 +484,16 @@ Esta automatización permite que, cada mes, el sistema procese los datos de form
 
 El propósito del Notebook es:
 
-Extraer la información mensual de desembolsos del BCP desde la tabla DVG3_Desembolsos.
 
-Extraer el volumen total del mercado de créditos desde DVG3_MercadoMensual.
+🎯 Extraer la información mensual de desembolsos del BCP desde la tabla DVG3_Desembolsos.
 
-Consolidar ambos conjuntos de datos.
+🎯 Extraer el volumen total del mercado de créditos desde DVG3_MercadoMensual.
 
-Calcular el indicador (Market Share).
+🎯 Consolidar ambos conjuntos de datos.
 
-Cargar los resultados procesados en la tabla de resultados TargetTabla.
+🎯 Calcular el indicador (Market Share).
+
+🎯 Cargar los resultados procesados en la tabla de resultados TargetTabla.
 
 Este indicador es el que se visualiza posteriormente en Power BI para monitorear el avance hacia la meta establecida para el Business Case.
 
