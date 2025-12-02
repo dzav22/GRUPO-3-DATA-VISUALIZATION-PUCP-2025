@@ -75,12 +75,9 @@ Incluye créditos de:
 
 ---
 
-### 🔢 Fórmula
+### 📐 Fórmula
 
-\[
-\text{Participación BCP} = 
-\frac{\text{Monto total de créditos mensuales otorgados por el BCP en soles}}
-     {\text{Monto total de créditos mensuales otorgados por el sistema bancario en soles}}
+**Participación BCP (%) = (Créditos del BCP en soles) / (Créditos totales del sistema bancario en soles)**
 \]
 
 El resultado se expresa en **porcentaje (%)**.
