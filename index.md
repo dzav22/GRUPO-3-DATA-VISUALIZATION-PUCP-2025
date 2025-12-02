@@ -184,4 +184,60 @@ En la siguiente sección se describe la **arquitectura de datos** propuesta para
 
 ![Arquitectura de Datos](05-Diagrama-Arquitectura/Arquitectura_solución.png)
 
+# 💾 CAPA DE DATOS
+
+## 1. Creación de tablas (DDL)
+
+A continuación se muestran ejemplos de código SQL utilizado para crear las tablas principales del modelo.
+
+### 1.1. Tabla de hechos: DVG3_Desembolsos
+
+```sql
+CREATE TABLE dbo.DVG3_Desembolsos (
+    DesembolsoID        INT           IDENTITY(1,1) PRIMARY KEY,
+    SolicitudID         INT           NOT NULL,
+    Fecha               DATE          NOT NULL,
+    MontoDesembolsado   DECIMAL(18,2) NOT NULL,
+    Tasa                DECIMAL(5,2)  NULL,
+    PlazoMeses          INT           NULL,
+    NroCuotas           INT           NULL,
+    EntidadReceptoraID  INT           NULL
+);
+
+CREATE TABLE dbo.DVG3_Solicitudes (
+    SolicitudID     INT           IDENTITY(1,1) PRIMARY KEY,
+    ClienteID       INT           NOT NULL,
+    ProductoID      INT           NOT NULL,
+    CanalID         INT           NOT NULL,
+    EjecutivoID     INT           NOT NULL,
+    SegmentoID      INT           NOT NULL,
+    MonedaID        INT           NOT NULL,
+    EstadoID        INT           NOT NULL,
+    FechaEnvio      DATE          NOT NULL,
+    MontoSolicitado DECIMAL(18,2) NOT NULL,
+    DocCompleto     BIT           NOT NULL
+);
+
+CREATE TABLE dbo.DVG3_Cliente (
+    ClienteID     INT          PRIMARY KEY,
+    TipoCliente   VARCHAR(50)  NOT NULL,
+    RangoEdad     VARCHAR(50)  NULL,
+    RangoIngreso  VARCHAR(50)  NULL,
+    Ocupacion     VARCHAR(100) NULL,
+    AniosBanco    INT          NULL
+);
+
+CREATE TABLE dbo.DVG3_Region (
+    RegionID      INT          PRIMARY KEY,
+    NombreRegion  VARCHAR(100) NOT NULL,
+    ZonaComercial VARCHAR(100) NULL
+);
+
+CREATE TABLE dbo.TargetTabla (
+    AnioMes          CHAR(6)       PRIMARY KEY,      -- formato AAAAMM
+    Desembolsos_S   DECIMAL(18,2) NOT NULL,
+    MarketShare     DECIMAL(5,2)  NULL,
+    Target_S        DECIMAL(18,2) NULL
+);
+
 
