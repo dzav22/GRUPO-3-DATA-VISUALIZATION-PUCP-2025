@@ -155,3 +155,6 @@ Con la solución analítica implementada, se espera:
 ## 🧱 Arquitectura de Datos
 
 En la siguiente sección se describe la **arquitectura de datos** propuesta para soportar el business case, incluyendo las capas de datos, ETL, almacenamiento y presentación.
+
+![Arquitectura de Datos](Arquitectura_solución.png)
+
