@@ -151,6 +151,32 @@ Con la solución analítica implementada, se espera:
 - Mayor **capacidad de explicar resultados a la alta dirección**, con reportes claros, trazables y visualmente consistentes.
 
 ---
+☁️ Solución de Negocio Cloud con Microsoft Fabric, Power BI y Azure
+✨ Arquitectura de Datos Moderna para el BCP
+
+Este proyecto implementa una solución de analítica moderna en la nube, diseñada para integrar múltiples fuentes de datos, automatizar procesos ETL y habilitar dashboards ejecutivos que permitan monitorear y accionar sobre el indicador de participación de créditos del BCP.
+
+La arquitectura combina herramientas robustas, escalables y de clase empresarial, asegurando integridad del dato, gobernanza y capacidad de análisis en tiempo real.
+
+🧩 Componentes Principales de la Solución
+
+Microsoft Fabric Warehouse & Data Factory
+Plataforma unificada para orquestar, transformar y consolidar datos empresariales, integrando procesos ETL eficientes.
+
+Azure SQL (Staging Layer)
+Base de datos estructurada en la nube utilizada como zona de staging para alojar datos transaccionales, fuentes SBS y registros históricos.
+
+Power BI (Visualización & Modelo Semántico)
+Motor analítico donde se construye el modelo de negocio, se crean medidas DAX y se diseñan dashboards ejecutivos con storytelling.
+
+Excel / Procesos Operativos
+Canal de entrada y revisión operativa que permite realizar cargas menores, validaciones o lectura rápida de datasets específicos.
+
+Usuarios Finales / Dirección / Gestión Comercial
+Reciben la visualización final del KPI, con capacidad de drill-down, comparativos, tendencias e interpretación bajo el marco
+What? – So What? – Now What?
+
+
 
 ## 🧱 Arquitectura de Datos
 
