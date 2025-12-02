@@ -5,6 +5,7 @@ Diagrama final de la solución, mostrando la integración entre:
 - Capa de almacenamiento
 - Capa de presentación
 ![Diagrama de Arquitectura](Arquitectura_solución.png)
+
 La arquitectura implementada sigue un flujo moderno y escalable que garantiza la calidad, trazabilidad y disponibilidad de los datos en cada etapa del proceso analítico.
 El punto de partida es la información proveniente de la Superintendencia de Banca, Seguros y AFP (SBS), la cual es ingerida inicialmente en un entorno de Azure SQL (staging). En esta capa se almacena la data cruda con el objetivo de disponer de una fuente intermedia confiable antes de ejecutar cualquier transformación.
 
