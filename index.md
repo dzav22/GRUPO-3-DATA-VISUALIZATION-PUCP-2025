@@ -160,19 +160,19 @@ La arquitectura combina herramientas robustas, escalables y de clase empresarial
 
 🧩 Componentes Principales de la Solución
 
-Microsoft Fabric Warehouse & Data Factory
+a) Microsoft Fabric Warehouse & Data Factory:
 Plataforma unificada para orquestar, transformar y consolidar datos empresariales, integrando procesos ETL eficientes.
 
-Azure SQL (Staging Layer)
+b) Azure SQL (Staging Layer):
 Base de datos estructurada en la nube utilizada como zona de staging para alojar datos transaccionales, fuentes SBS y registros históricos.
 
-Power BI (Visualización & Modelo Semántico)
+c) Power BI (Visualización & Modelo Semántico):
 Motor analítico donde se construye el modelo de negocio, se crean medidas DAX y se diseñan dashboards ejecutivos con storytelling.
 
-Excel / Procesos Operativos
+d) Excel / Procesos Operativos:
 Canal de entrada y revisión operativa que permite realizar cargas menores, validaciones o lectura rápida de datasets específicos.
 
-Usuarios Finales / Dirección / Gestión Comercial
+e) Usuarios Finales / Dirección / Gestión Comercial
 Reciben la visualización final del KPI, con capacidad de drill-down, comparativos, tendencias e interpretación bajo el marco
 What? – So What? – Now What?
 
