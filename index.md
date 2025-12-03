@@ -861,7 +861,7 @@ A continuación, se presentan las principales pantallas del reporte desarrollado
 ![Indicador](./04-Capa-Presentacion/imagen3.png)
 
 🖼️ 4. Dashboard Comercial del BCP
-![Dashboard](./04-Capa-Presentacion/imagen4.png)
+![Dashboard](./04-Capa-Presentacion/imagen_4.png)
 
 🖼️ 5. Reporte Ejecutivo — What / So What / Now What
 ![ReporteEjecutivo](./04-Capa-Presentacion/imagen_5.png)
