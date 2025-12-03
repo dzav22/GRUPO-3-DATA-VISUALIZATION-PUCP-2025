@@ -894,79 +894,98 @@ Obtener detalles (Drill Through):
 ¿Cuáles son las tres Sucursales que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 2)
+![Pregunta 2](./04-Capa-Presentacion/imagen8.png)
+
+
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 2)
+![Detalle P2](./04-Capa-Presentacion/imagen9.png)
 
 3️⃣ Pregunta 3 — Tipo de Producto
 ¿Qué TIPO DE PRODUCTO registró el mayor impacto en el valor promedio del INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período mayo 2025 a mayo 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 3)
+![Pregunta 3](./04-Capa-Presentacion/imagen10.png)
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 3)
+![Detalle P3](./04-Capa-Presentacion/imagen11.png)
+
 
 4️⃣ Pregunta 4 — Segmento
 ¿Cuál es el Top del segmento que registra el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 4)
+![Pregunta 4](./04-Capa-Presentacion/imagen12.png)
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 4)
+![Detalle P4](./04-Capa-Presentacion/imagen13.png)
+
 
 5️⃣ Pregunta 5 — Región
 ¿Cuáles son las tres regiones que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 5)
+![Pregunta 5](./04-Capa-Presentacion/imagen14.png)
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 5)
+![Detalle P5](./04-Capa-Presentacion/imagen15.png)
+
 
 6️⃣ Pregunta 6 — Canales (Detalle Alterno)
 ¿Cuáles son los tres canales que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 6)
+![Pregunta 6](./04-Capa-Presentacion/imagen16.png)
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 6)
+![Detalle P6](./04-Capa-Presentacion/imagen17.png)
+
 
 7️⃣ Pregunta 7 — Tipos de Cliente
 ¿Cuáles son los tres tipos de clientes que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 7)
+![Pregunta 7](./04-Capa-Presentacion/imagen18.png)
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 7)
+![Detalle P7](./04-Capa-Presentacion/imagen19.png)
+
+
 
 8️⃣ Pregunta 8 — Campañas
 ¿Cuáles son las tres campañas que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 8)
+![Pregunta 8](./04-Capa-Presentacion/imagen20.png)
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 8)
+![Detalle P8](./04-Capa-Presentacion/imagen21.png)
+
 
 9️⃣ Pregunta 9 — Productos (Detalle Alterno)
 ¿Cuáles son los tres productos que registraron el mayor aporte promedio en el INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período comprendido entre mayo de 2025 y mayo de 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 9)
+![Pregunta 9](./04-Capa-Presentacion/imagen22.png)
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 9)
+![Detalle P9](./04-Capa-Presentacion/imagen23.png)
+
+
 
 🔟 Pregunta 10 — Ejecutivos
 ¿Quiénes conforman el Top 3 de EJECUTIVOS que tuvieron el mayor aporte promedio en el valor del INDICADOR MENSUAL DE PARTICIPACIÓN DEL BCP EN EL MONTO TOTAL DE CRÉDITOS OTORGADOS EN SOLES POR EL SISTEMA BANCARIO PERUANO durante el período de mayo 2025 a mayo 2026?
 
 Visualización principal:
-(Aquí insertarás la imagen de la pregunta 10)
+![Pregunta 10](./04-Capa-Presentacion/imagen24.png)
+
 
 Obtener detalles (Drill Through):
-(Aquí insertarás la imagen del detalle de la pregunta 10)
+![Detalle P10](./04-Capa-Presentacion/imagen25.png)
+
