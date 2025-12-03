@@ -1,6 +1,7 @@
 <p align="left">
-  <img src="https://logodownload.org/wp-content/uploads/2019/05/bcp-logo-1.png" alt="Logo BCP" height="60">
+  <img src="./01-Capa-Datos/bancologo.png" alt="Logo BCP" height="85">
 </p>
+
 
 # 📊 Proyecto Final – Indicador de Participación de Créditos del BCP
 
