@@ -1026,14 +1026,16 @@ Obtener detalles (Drill Through):
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; width: 90%; margin: auto;">
     <!-- Tarjeta 1 -->
-    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
-                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
-         onmouseover="this.style.transform='scale(1.04)'"
-         onmouseout="this.style.transform='scale(1)'">
-      <img src="https://img.icons8.com/fluency/96/ms-fabric.png" width="55" />
-      <h3 style="font-size:20px; margin-top: 10px;">Microsoft Fabric</h3>
-      <p style="color:#555; font-size: 15px;">Ingesta, transformación y orquestación del flujo de datos.</p>
-    </div>
+<div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+     onmouseover="this.style.transform='scale(1.04)'"
+     onmouseout="this.style.transform='scale(1)'">
+
+  <img src="./06-Equipo/fabriclogo.png" width="55" />
+
+  <h3 style="font-size:20px; margin-top: 10px;">Microsoft Fabric</h3>
+  <p style="color:#555; font-size: 15px;">Ingesta, transformación y orquestación del flujo de datos.</p>
+</div>
 <!-- Tarjeta 2 -->
     <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
                 box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
