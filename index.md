@@ -490,15 +490,15 @@ Esta automatización permite que, cada mes, el sistema procese los datos de form
 El propósito del Notebook es:
 
 
-🎯 Extraer la información mensual de desembolsos del BCP desde la tabla DVG3_Desembolsos.
+- Extraer la información mensual de desembolsos del BCP desde la tabla DVG3_Desembolsos.
 
-🎯 Extraer el volumen total del mercado de créditos desde DVG3_MercadoMensual.
+- Extraer el volumen total del mercado de créditos desde DVG3_MercadoMensual.
 
-🎯 Consolidar ambos conjuntos de datos.
+- Consolidar ambos conjuntos de datos.
 
-🎯 Calcular el indicador (Market Share).
+- Calcular el indicador (Market Share).
 
-🎯 Cargar los resultados procesados en la tabla de resultados TargetTabla.
+- Cargar los resultados procesados en la tabla de resultados TargetTabla.
 
 Este indicador es el que se visualiza posteriormente en Power BI para monitorear el avance hacia la meta establecida para el Business Case.
 
@@ -510,21 +510,21 @@ El proceso automatizado sigue la siguiente secuencia:
 
 El Notebook se conecta al Lakehouse/SQL para leer:
 
-Los desembolsos mensuales del BCP desde DVG3_Desembolsos.
+- Los desembolsos mensuales del BCP desde DVG3_Desembolsos.
 
-El total de créditos desembolsados en el sistema financiero peruano desde DVG3_MercadoMensual.
+- El total de créditos desembolsados en el sistema financiero peruano desde DVG3_MercadoMensual.
 
-Ambas tablas contienen una columna de fecha, lo que permite agrupar la información por período mensual.
+- Ambas tablas contienen una columna de fecha, lo que permite agrupar la información por período mensual.
 
 2️⃣ Transformación y Cálculo del KPI
 
 El Notebook:
 
-Construye la clave temporal AnioMes en formato AAAAMM.
+- Construye la clave temporal AnioMes en formato AAAAMM.
 
-Agrupa los desembolsos del BCP por mes.
+- Agrupa los desembolsos del BCP por mes.
 
-Agrupa los desembolsos totales del mercado por mes.
+- Agrupa los desembolsos totales del mercado por mes.
 
 Calcula el KPI de participación:
 
@@ -1032,10 +1032,7 @@ El proyecto consolidó conocimientos avanzados en:
 ✔ 7. Entrega profesional con enfoque corporativo
 
 La construcción del flujo completo —desde la capa de datos hasta la capa de presentación— demostró la capacidad del equipo para replicar un proceso real de analítica empresarial, como el que se utiliza en áreas de inteligencia comercial, finanzas y estrategia.
-
-
-
-## 📘 Participación del Grupo
+---
 <section style="padding: 50px 0;">
   <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Participación del Grupo</h2>
 
