@@ -605,3 +605,62 @@ Gracias a esta automatización:
 
 ✅ Se integra sin fricción con el Data Warehouse y Power BI.
 
+---
+
+# 🧱 CAPA DE ALMACENAMIENTO (Data Warehouse)
+
+La Capa de Almacenamiento consolida los datos ya transformados en Fabric y expone un **modelo analítico optimizado** para Power BI.  
+Aquí se materializan las tablas de hechos y dimensiones que dan soporte al KPI de **desembolsos de créditos del BCP**.
+
+---
+
+### 🗺️ A. Modelo de Datos Final (Modelo Dimensional)
+
+El Data Warehouse se implementa como un **modelo de estrella** centrado en la tabla de hechos de desembolsos y las dimensiones de negocio relevantes (cliente, región, campaña, canal, etc.).
+
+- ⭐ **Tabla de Hechos Principal:**  
+  - `DVG3 Desembolsos`  
+  - Contiene el detalle mensual de los **montos desembolsados**, fechas y entidad receptora.
+
+- 🧩 **Tabla de Hechos de Soporte:**  
+  - `DVG3 Solicitudes`  
+  - Registra el flujo de solicitudes de crédito (monto solicitado, estado, documentación completa, etc.) y permite analizar conversión de solicitud → desembolso.
+
+- 🎯 **Dimensiones de Negocio:**
+  - `DVG3 Cliente` → atributos de cliente (tipo, rango de edad, rango de ingreso, años con el banco).
+  - `DVG3 Region` y `DVG3 Sucursal` → estructura geográfica y comercial.
+  - `DVG3 Campania` → campañas comerciales asociadas a los créditos.
+  - `DVG3 Canal` → canal de colocación (agencia, digital, etc.).
+  - `DVG3 Segmento` → segmentación de clientes.
+  - `DVG3 Producto` → tipo de crédito / producto.
+  - `DVG3 Moneda` → tipo de moneda del crédito.
+  - `Calendario` → tabla de fechas que gobierna todos los análisis temporales.
+  - `Target Tabla` → metas mensuales de desembolso y *market share* para comparar contra lo realizado.
+
+- 🔗 **Relaciones Clave del Modelo:**
+  - `DVG3 Desembolsos` se relaciona con `DVG3 Solicitudes` vía **SolicitudID**, permitiendo analizar el funnel completo.
+  - Todas las tablas de hechos se conectan a `Calendario[Date]`, habilitando análisis **MoM, QoQ, YoY**.
+  - Dimensiones como Cliente, Región, Campaña y Canal se conectan en relaciones **1:N** hacia las tablas de hechos para filtrar correctamente los desembolsos.
+
+> 🖼️ **Modelo Semántico en Fabric**  
+> (Reemplaza la ruta por tu archivo real)
+
+![Modelo de Datos – Data Warehouse](03-Capa-Almacenamiento/modelo_semantico_DVG3.png)
+
+---
+
+### 📊 B. Medidas Clave en el Modelo (DAX)
+
+A continuación se documentan las principales medidas DAX creadas sobre el modelo.  
+Todas ellas se definen en la tabla de medidas **`_Medidas`** dentro del modelo semántico.
+
+#### 1️⃣ Medidas base de desembolsos
+
+**✅ Dese PROM – Monto promedio desembolsado**
+
+> Promedio del monto desembolsado en el contexto actual de filtro.
+
+```dax
+Dese PROM =
+AVERAGE ( 'DVG3 Desembolsos'[Monto_desembolsado] )
+
