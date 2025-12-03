@@ -438,37 +438,37 @@ A continuación se describen las tres etapas clave:
 Los Pipelines conectan directamente con la Capa de Datos SQL (DVG2), donde se encuentran las tablas transaccionales y de mercado.
 En esta fase se extraen:
 
-Las transacciones mensuales de ventas y desembolsos.
+- Las transacciones mensuales de ventas y desembolsos.
 
-Los datos de comportamiento del mercado (por ejemplo, tb_mercado_mensual).
+- Los datos de comportamiento del mercado (por ejemplo, tb_mercado_mensual).
 
-Atributos maestros necesarios para el cálculo del indicador.
+- Atributos maestros necesarios para el cálculo del indicador.
 
-El objetivo de la extracción es traer la información más reciente y garantizar que el análisis se base en el período correcto.
+- El objetivo de la extracción es traer la información más reciente y garantizar que el análisis se base en el período correcto.
 
 ## 🔹 2. Transformación (T)
 
 Una vez extraídos, los datos pasan a un proceso de transformación donde:
 
-Se limpian y validan los registros.
+- Se limpian y validan los registros.
 
-Se ajustan los formatos y tipos de datos.
+- Se ajustan los formatos y tipos de datos.
 
-Se combinan las distintas fuentes (ventas, mercado, atributos maestros).
+- Se combinan las distintas fuentes (ventas, mercado, atributos maestros).
 
-Se prepara la estructura base para el cálculo del KPI de participación.
+- Se prepara la estructura base para el cálculo del KPI de participación.
 
-En esta fase se invoca un componente adicional (Notebook Python, descrito en la sección siguiente) para ejecutar reglas de negocio avanzadas.
+- En esta fase se invoca un componente adicional (Notebook Python, descrito en la sección siguiente) para ejecutar reglas de negocio avanzadas.
 
 ## 🔹 3. Carga (L)
 
 Finalmente, los datos transformados se envían al Fabric Data Warehouse, donde:
 
-Se almacenan como tablas de análisis optimizadas.
+- Se almacenan como tablas de análisis optimizadas.
 
-Se actualiza el dataset utilizado por el modelo semántico.
+- Se actualiza el dataset utilizado por el modelo semántico.
 
-Se habilita el consumo directo para Power BI y Excel.
+- Se habilita el consumo directo para Power BI y Excel.
 
 Esta etapa garantiza que los datos queden listos para el modelado y presentación, cumpliendo con los criterios de periodicidad mensual del proyecto.
 
