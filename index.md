@@ -611,6 +611,9 @@ Gracias a esta automatización:
 
 La Capa de Almacenamiento consolida los datos ya transformados en Fabric y expone un **modelo analítico optimizado** para Power BI.  
 Aquí se materializan las tablas de hechos y dimensiones que dan soporte al KPI de **desembolsos de créditos del BCP**.
+A continuación se muestra la estructura física del **Fabric Data Warehouse (DVG3)**, donde residen las tablas relacionales creadas mediante los scripts SQL de la Capa de Datos. Este entorno constituye la base estructurada sobre la cual se construye el modelo dimensional y las medidas analíticas del proyecto.
+
+![Estructura del Data Warehouse en Fabric](03-Capa-Almacenamiento/warehouse_fabric.png)
 
 ---
 
