@@ -989,6 +989,7 @@ Visualización principal:
 Obtener detalles (Drill Through):
 ![Detalle P10](./04-Capa-Presentacion/imagen25.png)
 
+```html
 
 <section style="padding: 60px 0; text-align: center;">
   <h2 style="font-size: 42px; font-weight: 700; margin-bottom: 10px;">Stack Tecnológico</h2>
@@ -1058,5 +1059,5 @@ Obtener detalles (Drill Through):
 
   </div>
 </section>
-
+```
 
