@@ -847,5 +847,19 @@ El reporte fue diseñado bajo un enfoque de claridad ejecutiva, priorizando:
 ✓ Flujos de navegación simples (pestañas superiores)
 ✓ Uso de drill-through para profundizar en el análisis mensual
 
-A continuación, se presentan las vistas principales del reporte desarrolladas en Power BI.
+A continuación, se presentan las principales pantallas del reporte desarrollado en Power BI para el Banco de Crédito del Perú (BCP). Cada vista responde a una sección clave del análisis: desde la introducción al caso, pasando por la definición del indicador, hasta el análisis comercial y el reporte ejecutivo.
+
+
+🖼️ 1. Portada del Proyecto
+![Portada](./04-Capa-Presentacion/imagen1.png)
+
+
+🖼️ 2. Planteamiento del Business Case
+
+🖼️ 3. Indicador Mensual — Definición, Fórmula, Impacto y Rangos
+
+🖼️ 4. Dashboard Comercial del BCP
+
+🖼️ 5. Reporte Ejecutivo — What / So What / Now What
+
 
