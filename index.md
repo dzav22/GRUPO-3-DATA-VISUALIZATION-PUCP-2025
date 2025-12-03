@@ -549,17 +549,8 @@ Esta tabla es consumida directamente en Power BI para generar visualizaciones de
 ⏱️ 4️⃣ Orquestación Automática en Fabric
 
 El Notebook es ejecutado de forma programada mediante un Pipeline de Microsoft Fabric, configurado para correr mensualmente.
-De esta manera:
+De esta manera, el cálculo del KPI, la actualización del dataset, la disponibilidad en Power BI, se generan de forma automática, sin dependencia del usuario.
 
-El cálculo del KPI,
-
-La actualización del dataset,
-
-Y la disponibilidad en Power BI,
-
-se generan de forma automática, sin dependencia del usuario.
-
-Esto cumple con el requerimiento del curso de implementar al menos una automatización ETL real dentro del flujo del proyecto.
 
 Con lo anteriormente explicado, se presenta el código usado.
 
