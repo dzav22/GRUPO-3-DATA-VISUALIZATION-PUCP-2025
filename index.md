@@ -1064,14 +1064,16 @@ Obtener detalles (Drill Through):
       <p style="color:#555; font-size: 15px;">Dashboard estratégico e insights interactivos.</p>
     </div>
 <!-- Tarjeta 5 -->
-    <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
-                box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
-         onmouseover="this.style.transform='scale(1.04)'"
-         onmouseout="this.style.transform='scale(1)'">
-      <img src="https://img.icons8.com/external-anggara-flat-anggara-putra/96/external-data-analytics-business-anggara-flat-anggara-putra.png" width="55" />
-      <h3 style="font-size:20px; margin-top: 10px;">DAX</h3>
-      <p style="color:#555; font-size: 15px;">Cálculo de KPIs avanzados y lógica de negocio.</p>
-    </div>
+<div style="background: #ffffff; padding: 30px; border-radius: 18px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
+     onmouseover="this.style.transform='scale(1.04)'"
+     onmouseout="this.style.transform='scale(1)'">
+
+  <img src="./06-Equipo/dax.png" width="55" />
+
+  <h3 style="font-size:20px; margin-top: 10px;">DAX</h3>
+  <p style="color:#555; font-size: 15px;">Cálculo de KPIs avanzados y lógica de negocio.</p>
+</div>
 <!-- Tarjeta 6 -->
     <div style="background: #ffffff; padding: 30px; border-radius: 18px; 
                 box-shadow: 0 8px 20px rgba(0,0,0,0.07); transition: 0.25s; cursor: pointer;"
