@@ -1038,13 +1038,14 @@ La construcción del flujo completo —desde la capa de datos hasta la capa de p
   <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Participación del Grupo</h2>
 
   <table style="border-collapse: collapse; width: 380px; font-size: 16px;">
-      <tr>
-          <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participante</th>
-          <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participación en el proyecto</th>
-      </tr>
-      <tr>
-          <td style="border: 1px solid #000; padding: 8px;">Diego Zavaleta</td>
-          <td style="border: 1px solid #000; padding: 8px;">100%</td>
+    <tr>
+      <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participante</th>
+      <th style="border: 1px solid #000; padding: 8px; background:#f2f2f2;">Participación en el proyecto</th>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #000; padding: 8px;">Diego Zavaleta</td>
+      <td style="border: 1px solid #000; padding: 8px;">100%</td>
+    </tr>
   </table>
 </section>
 
